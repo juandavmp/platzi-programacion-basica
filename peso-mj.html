@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de peso en el sistema solar</title>
+  <style>
+  body {
+      background-color: black;
+      color: white
+    }
+  </style>
+
+</head>
+<body onload="setTimeout(pesoM, 300)">
+    <h1><center>TU PESO EN OTRO PLANETA</center></h1>
+    <p> EN ESTA CALCULADORA PUEDES OBTENER TU PESO EN VARIOS <strong>PLANETAS</strong></p>
+    <p id="answer"></p>
+    <script>
+      function pesoM() {
+        var usuario = prompt("Ingrese su peso");
+        var planeta = prompt('En que planeta del sistema solar desea obtener su peso')
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var g_mercurio = 3.7;
+        var g_venus = 8.87
+        var g_saturno = 10.44;
+        var g_neptuno = 11.15
+        var g_urano = 8.7
+        var g_pluton = 0.62
+        if (planeta == 'Marte') {
+          var peso_final = (usuario * g_marte) / g_tierra;
+        }
+        else if (planeta == 'Jupiter') {
+          var peso_final = (usuario * g_jupiter) / g_tierra;
+        }
+        else if (planeta == 'Mercurio') {
+          var peso_final = (usuario * g_mercurio) / g_tierra;
+        }
+        else if (planeta == 'Venus') {
+          var peso_final = (usuario * g_venus) / g_tierra;
+        }
+        else if (planeta == 'Saturno') {
+          var peso_final = (usuario * g_saturno) / g_tierra;
+        }
+        else if (planeta == 'Neptuno') {
+          var peso_final = (usuario * g_neptuno) / g_tierra;
+        }
+        else if (planeta == 'Urano') {
+          var peso_final = (usuario * g_urano) / g_tierra;
+        }
+        else if (planeta == 'Plutón') {
+          var peso_final = (usuario * g_pluton) / g_tierra;
+        }
+        else {
+          alert('Ha ingresado una opcion no valida\n (Recuerde usar la Mayuscula)\n recargue la pagina');
+        }
+        var n  = peso_final.toFixed(3);
+        document.getElementById("answer").innerHTML = "Su peso en " +planeta+" es de "+n+ " kilos";
+      }
+    </script>
+</body>
+</html>

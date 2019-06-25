@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de peso en el sistema solar</title>
+  <style>
+  body {
+      background-color: black;
+      color: white
+    }
+  </style>
+
+</head>
+<body onload="setTimeout(pesoM, 300)">
+    <h1><center>TU PESO EN OTRO PLANETA</center></h1>
+    <p> EN ESTA CALCULADORA PUEDES OBTENER TU PESO EN VARIOS <strong>PLANETAS</strong></p>
+
+    <script>
+      function pesoM() {
+        var usuario = prompt("Ingrese su peso");
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var peso = 77;
+        var peso_final;
+        peso_final = (usuario * g_marte) / g_tierra;
+
+        alert("Su peso en marte es de " + peso_final);
+      }
+    </script>
+</body>
+</html>
